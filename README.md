@@ -2,6 +2,13 @@
 
 Written on python 3, not tested for python 2.x
 
+## Install
+```shell
+git clone https://github.com/CNDspace/unprotect_it_rules_downloader.git
+cd unprotect_it_rules_downloader
+pip install -r requirements.txt
+```
+
 ## Usage
 ```shell
 optional arguments:
