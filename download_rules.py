@@ -35,11 +35,11 @@ def save_rule(save_dir_path, rule, rule_key, rule_ext):
         rule_file.close()
 
 
-def get_rules(json_content, dir_path, rule_type):
+def get_rules(json_content, dir_path, _rule_type):
     for rule in json_content["results"]:
-        if not rule_type:
+        if not _rule_type:
             save_rule(dir_path, rule["rule"], rule["key"], get_rule_ext(rule["type"]["id"]))
-        elif rule["type"]["id"] == rule_type:
+        elif rule["type"]["id"] == _rule_type:
             save_rule(dir_path, rule["rule"], rule["key"], get_rule_ext(rule["type"]["id"]))
     return json_content["next"]
 
